@@ -2,7 +2,7 @@ FROM alpine:3.7
 
 RUN echo @edge http://nl.alpinelinux.org/alpine/edge/community >> /etc/apk/repositories && \
     echo @edge http://nl.alpinelinux.org/alpine/edge/main >> /etc/apk/repositories && \
-    apk add --no-cache apk-tools@edge chromium@edge nss@edge dumb-init && \
+    apk add --no-cache apk-tools@edge chromium@edge~68 nss@edge dumb-init && \
     addgroup -S chromium && \
     adduser -S -g chromium chromium && \
     chown -R chromium:chromium /home/chromium

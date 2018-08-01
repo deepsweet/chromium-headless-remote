@@ -1,7 +1,7 @@
 [![npm](https://img.shields.io/docker/build/deepsweet/chromium-headless-remote.svg?style=flat-square)](https://hub.docker.com/r/deepsweet/chromium-headless-remote/)
 
 ```sh
-docker run -it --rm -p 9222:9222 deepsweet/chromium-headless-remote
+docker run -it --rm -p 9222:9222 deepsweet/chromium-headless-remote:68
 ```
 
 ```js

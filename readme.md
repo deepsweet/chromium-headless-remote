@@ -1,4 +1,4 @@
-[![npm](https://img.shields.io/docker/build/deepsweet/chromium-headless-remote.svg?style=flat-square)](https://hub.docker.com/r/deepsweet/chromium-headless-remote/)
+[![build](https://img.shields.io/docker/build/deepsweet/chromium-headless-remote.svg?style=flat-square)](https://hub.docker.com/r/deepsweet/chromium-headless-remote/) [![size](https://img.shields.io/microbadger/image-size/deepsweet/chromium-headless-remote.svg?style=flat-square)](https://microbadger.com/images/deepsweet/chromium-headless-remote)
 
 ```sh
 docker run -it --rm -p 9222:9222 deepsweet/chromium-headless-remote:68

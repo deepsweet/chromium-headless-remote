@@ -5,6 +5,7 @@ Dockerized Chromium in [headless](https://chromium.googlesource.com/chromium/src
 ## Usage
 
 ```sh
+docker pull deepsweet/chromium-headless-remote:68
 docker run -it --rm -p 9222:9222 deepsweet/chromium-headless-remote:68
 ```
 

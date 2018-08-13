@@ -39,3 +39,7 @@ import request from 'request-promise-native'
 ## Fonts
 
 It's possible to mount a folder with custom fonts to be used later by Chromium: add `-v $(pwd)/path/to/fonts:/home/chromium/.fonts` to `docker run` arguments.
+
+## Related
+
+* [firefox-headless-remote](https://github.com/deepsweet/firefox-headless-remote)

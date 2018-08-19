@@ -12,7 +12,7 @@ docker run -it --rm -p 9222:9222 deepsweet/chromium-headless-remote:68
 Example using [Puppeteer](https://github.com/GoogleChrome/puppeteer):
 
 ```js
-import puppeteer from 'puppeteer'
+import puppeteer from 'puppeteer-core'
 import request from 'request-promise-native'
 
 (async () => {
@@ -42,4 +42,5 @@ It's possible to mount a folder with custom fonts to be used later by Chromium: 
 
 ## Related
 
+* [ungoogled-chromium-headless-remote](https://github.com/deepsweet/ungoogled-chromium-headless-remote)
 * [firefox-headless-remote](https://github.com/deepsweet/firefox-headless-remote)

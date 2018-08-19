@@ -8,6 +8,7 @@ dumb-init -- /usr/bin/chromium-browser \
   --disable-background-networking \
   --disable-background-timer-throttling \
   --disable-default-apps \
+  --disable-dev-shm-usage \
   --disable-extensions \
   --disable-sync \
   --disable-translate \
@@ -24,4 +25,4 @@ dumb-init -- /usr/bin/chromium-browser \
   --remote-debugging-port=9222 \
   --safebrowsing-disable-auto-update \
   --use-gl=disabled \
-  --user-data-dir=/tmp
+  --user-data-dir=/home/chromium/

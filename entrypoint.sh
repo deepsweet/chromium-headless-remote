@@ -1,6 +1,8 @@
 #!/bin/sh
 
-fc-cache -f -v
+if [ "$(ls -A /home/chromium/.fonts/)" ]; then
+  fc-cache -f -v
+fi
 
 dumb-init -- /usr/bin/chromium-browser \
   --disable-background-networking \

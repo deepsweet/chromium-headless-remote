@@ -1,16 +1,14 @@
-FROM alpine:3.7
+FROM ubuntu:bionic
 
-RUN echo @edge http://nl.alpinelinux.org/alpine/edge/community >> /etc/apk/repositories && \
-    echo @edge http://nl.alpinelinux.org/alpine/edge/main >> /etc/apk/repositories && \
-    apk add --no-cache apk-tools@edge chromium@edge~68 nss dumb-init fontconfig && \
-    addgroup -S chromium && \
-    adduser -S -g chromium chromium && \
-    chown -R chromium:chromium /home/chromium && \
-    mkdir /home/chromium/.fonts
+RUN apt-get update && \
+    apt-get --no-install-recommends --yes install chromium-browser=69.\* dumb-init fontconfig && \
+    groupadd chromium && \
+    useradd --create-home --gid chromium chromium && \
+    chown --recursive chromium:chromium /home/chromium/
 
 VOLUME ["/home/chromium/.fonts"]
 
-COPY entrypoint.sh /home/chromium
+COPY --chown=chromium:chromium entrypoint.sh /home/chromium/
 
 USER chromium
 

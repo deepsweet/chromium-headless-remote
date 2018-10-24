@@ -1,4 +1,4 @@
-FROM ubuntu:bionic
+FROM ubuntu:cosmic
 
 RUN apt-get update && \
     apt-get --no-install-recommends --yes install chromium-browser=69.\* dumb-init fontconfig && \

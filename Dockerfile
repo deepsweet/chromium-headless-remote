@@ -1,7 +1,7 @@
 FROM ubuntu:cosmic
 
 RUN apt-get update && \
-    apt-get --no-install-recommends --yes install chromium-browser=70.\* dumb-init fontconfig && \
+    apt-get --no-install-recommends --yes install chromium-browser=70.0.3538.77\* dumb-init fontconfig && \
     groupadd chromium && \
     useradd --create-home --gid chromium chromium && \
     chown --recursive chromium:chromium /home/chromium/

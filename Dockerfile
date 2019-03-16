@@ -1,7 +1,7 @@
 FROM ubuntu:disco
 
 RUN apt-get update && \
-    apt-get --no-install-recommends --yes install chromium-browser=72\* dumb-init fontconfig && \
+    apt-get --no-install-recommends --yes install chromium-browser=73\* dumb-init fontconfig && \
     groupadd chromium && \
     useradd --create-home --gid chromium chromium && \
     chown --recursive chromium:chromium /home/chromium/

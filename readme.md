@@ -1,12 +1,12 @@
-[![version](https://img.shields.io/badge/chromium-73-green.svg?style=flat-square)](https://packages.ubuntu.com/disco/chromium-browser) [![build](https://img.shields.io/docker/build/deepsweet/chromium-headless-remote.svg?label=build&style=flat-square)](https://hub.docker.com/r/deepsweet/chromium-headless-remote/) [![size](https://img.shields.io/microbadger/image-size/deepsweet/chromium-headless-remote.svg?label=size&style=flat-square)](https://microbadger.com/images/deepsweet/chromium-headless-remote)
+[![version](https://img.shields.io/badge/chromium-74-green.svg?style=flat-square)](https://packages.ubuntu.com/disco/chromium-browser) [![build](https://img.shields.io/docker/build/deepsweet/chromium-headless-remote.svg?label=build&style=flat-square)](https://hub.docker.com/r/deepsweet/chromium-headless-remote/) [![size](https://img.shields.io/microbadger/image-size/deepsweet/chromium-headless-remote.svg?label=size&style=flat-square)](https://microbadger.com/images/deepsweet/chromium-headless-remote)
 
 Dockerized Chromium in [headless](https://chromium.googlesource.com/chromium/src/+/lkgr/headless/README.md) [remote debugging mode](https://chromedevtools.github.io/devtools-protocol/).
 
 ## Usage
 
 ```sh
-docker pull deepsweet/chromium-headless-remote:73
-docker run -it --rm -p 9222:9222 deepsweet/chromium-headless-remote:73
+docker pull deepsweet/chromium-headless-remote:74
+docker run -it --rm -p 9222:9222 deepsweet/chromium-headless-remote:74
 ```
 
 Example using [Puppeteer](https://github.com/GoogleChrome/puppeteer):

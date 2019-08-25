@@ -28,5 +28,5 @@ fi
   --remote-debugging-address=0.0.0.0 \
   --remote-debugging-port=9222 \
   --safebrowsing-disable-auto-update \
-  --use-gl=disabled \
+  --disable-gpu \
   --user-data-dir=/home/chromium/

@@ -29,4 +29,5 @@ fi
   --remote-debugging-port=9222 \
   --safebrowsing-disable-auto-update \
   --disable-gpu \
-  --user-data-dir=/home/chromium/
+  --user-data-dir=/home/chromium/ \
+  "$@"

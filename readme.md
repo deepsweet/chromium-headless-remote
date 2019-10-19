@@ -5,8 +5,8 @@ Dockerized Chromium in [headless](https://chromium.googlesource.com/chromium/src
 ## Usage
 
 ```sh
-docker pull deepsweet/chromium-headless-remote:76
-docker run -it --rm -p 9222:9222 deepsweet/chromium-headless-remote:76
+docker pull deepsweet/chromium-headless-remote:77
+docker run -it --rm -p 9222:9222 deepsweet/chromium-headless-remote:77
 ```
 
 Example using [Puppeteer](https://github.com/GoogleChrome/puppeteer):

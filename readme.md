@@ -11,6 +11,12 @@ docker run -it --rm -p 9222:9222 deepsweet/chromium-headless-remote:77
 
 Example using [Puppeteer](https://github.com/GoogleChrome/puppeteer):
 
+Ensure to match version of `puppeteer-core` to the version of Chromium you are using:
+
+```sh
+npm install puppeteer-core@chrome-77
+```
+
 ```js
 import puppeteer from 'puppeteer-core'
 import request from 'request-promise-native'

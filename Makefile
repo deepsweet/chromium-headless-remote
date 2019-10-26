@@ -27,14 +27,11 @@ TAGS:=77.0.3865.90 77.0.3865 77.0 77
 
 tags:
 	for TAG in $(TAGS) ; do \
-		git tag -d $$TAG || true ; \
-	done
-	for TAG in $(TAGS) ; do \
-		git tag $$TAG ; \
+		git tag --force $$TAG ; \
 	done
 
 push-tags:
 	for TAG in $(TAGS) ; do \
-		git push --delete origin $$TAG ; \
+		git push --delete --quiet origin $$TAG || true; \
 	done
 	git push origin --tags

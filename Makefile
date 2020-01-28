@@ -23,7 +23,7 @@ show-versions:
 # we use wildcard in Dockerfile and shorten it here.
 # Match the value here to that assigned to CHROMIUM_VERSION variable inside Dockerfile.
 # Commit both changes, run `make push-tags` and wait for Docker Hub to build new images.
-TAGS:=77.0.3865.90 77.0.3865 77.0 77
+TAGS:=79.0.3945.79 79.0.3945 79.0 79
 
 tags:
 	for TAG in $(TAGS) ; do \

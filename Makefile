@@ -10,7 +10,6 @@
 # 2. Pick newer version and paste here and in Dockerfile (properly shortening it)
 # 3. Commit changes to this and Dockerfile files
 # 4. Run `make tags`
-# 5. Run `make push-tags` to push ALL new tags up
 
 show-versions:
 	docker run -it --rm \
@@ -26,12 +25,8 @@ show-versions:
 TAGS:=79.0.3945.79 79.0.3945 79.0 79
 
 tags:
-	for TAG in $(TAGS) ; do \
-		git tag --force $$TAG ; \
+	for TAG in $(TAGS); do \
+		git tag --force $$TAG; \
+		git push --delete --quiet origin $$TAG 2> /dev/null || true; \
+		git push origin $$TAG; \
 	done
-
-push-tags:
-	for TAG in $(TAGS) ; do \
-		git push --delete --quiet origin $$TAG || true; \
-	done
-	git push origin --tags

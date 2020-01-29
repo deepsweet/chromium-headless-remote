@@ -1,4 +1,4 @@
-[![version](https://img.shields.io/badge/chromium-79-green.svg?style=flat-square)](https://packages.ubuntu.com/bionic/chromium-browser) [![hub](https://flat.badgen.net/docker/pulls/deepsweet/chromium-headless-remote)](https://hub.docker.com/r/deepsweet/chromium-headless-remote/) [![size](https://img.shields.io/microbadger/image-size/deepsweet/chromium-headless-remote.svg?label=size&style=flat-square)](https://microbadger.com/images/deepsweet/chromium-headless-remote)
+[![version](https://img.shields.io/badge/chromium-79-green.svg?style=flat-square)](https://packages.ubuntu.com/bionic/chromium-browser) [![hub](https://flat.badgen.net/docker/pulls/deepsweet/chromium-headless-remote)](https://hub.docker.com/r/deepsweet/chromium-headless-remote/) [![size](https://flat.badgen.net/docker/size/deepsweet/chromium-headless-remote)](https://hub.docker.com/r/deepsweet/chromium-headless-remote/)
 
 Dockerized Chromium in [headless](https://chromium.googlesource.com/chromium/src/+/lkgr/headless/README.md) [remote debugging mode](https://chromedevtools.github.io/devtools-protocol/).
 

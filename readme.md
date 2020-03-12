@@ -1,12 +1,11 @@
-[![version](https://img.shields.io/badge/chromium-79-green.svg?style=flat-square)](https://packages.ubuntu.com/bionic/chromium-browser) [![hub](https://flat.badgen.net/docker/pulls/deepsweet/chromium-headless-remote?label=pulls)](https://hub.docker.com/r/deepsweet/chromium-headless-remote/) [![size](https://flat.badgen.net/docker/size/deepsweet/chromium-headless-remote?label=size)](https://hub.docker.com/r/deepsweet/chromium-headless-remote/)
+[![version](https://img.shields.io/badge/chromium-80-green.svg?style=flat-square)](https://packages.ubuntu.com/bionic/chromium-browser) [![hub](https://flat.badgen.net/docker/pulls/deepsweet/chromium-headless-remote?label=pulls)](https://hub.docker.com/r/deepsweet/chromium-headless-remote/) [![size](https://flat.badgen.net/docker/size/deepsweet/chromium-headless-remote?label=size)](https://hub.docker.com/r/deepsweet/chromium-headless-remote/)
 
 Dockerized Chromium in [headless](https://chromium.googlesource.com/chromium/src/+/lkgr/headless/README.md) [remote debugging mode](https://chromedevtools.github.io/devtools-protocol/).
 
 ## Usage
 
 ```sh
-docker pull deepsweet/chromium-headless-remote:79
-docker run -it --rm -p 9222:9222 deepsweet/chromium-headless-remote:79
+docker run -it --rm -p 9222:9222 deepsweet/chromium-headless-remote:80
 ```
 
 Example using [Puppeteer](https://github.com/GoogleChrome/puppeteer):
@@ -14,7 +13,7 @@ Example using [Puppeteer](https://github.com/GoogleChrome/puppeteer):
 Ensure to match version of `puppeteer-core` to the version of Chromium you are using:
 
 ```sh
-npm install puppeteer-core@chrome-79
+npm install puppeteer-core@chrome-80
 ```
 
 ```js

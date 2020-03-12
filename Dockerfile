@@ -6,7 +6,7 @@ FROM ubuntu:bionic
 # we use wildcard.
 # Match the value here to that assigned to TAGS variable inside Makefile.
 # Commit both changes, run `make push-tags` and wait for Docker Hub to build new images.
-ARG CHROMIUM_VERSION=79.0.3945.79\*
+ARG CHROMIUM_VERSION=80.0.3987.87\*
 
 RUN apt-get update && \
     apt-get --no-install-recommends --yes install \

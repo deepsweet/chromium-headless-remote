@@ -1,11 +1,5 @@
 FROM ubuntu:bionic
 
-# Run `make show-versions` to see latest versions
-# Pick one that's higher than one below and paste here.
-# Because actual package versions are long: '77.0.3865.90-0ubuntu0.18.04.1'
-# we use wildcard.
-# Match the value here to that assigned to TAGS variable inside Makefile.
-# Commit both changes, run `make push-tags` and wait for Docker Hub to build new images.
 ARG CHROMIUM_VERSION=80.0.3987.87\*
 
 RUN apt-get update && \

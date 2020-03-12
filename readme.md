@@ -17,33 +17,33 @@ npm install puppeteer-core@chrome-80
 ```
 
 ```js
-import puppeteer from 'puppeteer-core'
+import fetch from 'node-fetch'
 import request from 'request-promise-native'
 
-(async () => {
-  try {
-    const { body: { webSocketDebuggerUrl } } = await request({
-      uri: 'http://localhost:9222/json/version',
-      json: true,
-      resolveWithFullResponse: true
-    })
-    const browser = await puppeteer.connect({
-      browserWSEndpoint: webSocketDebuggerUrl
-    })
-    const page = await browser.newPage()
+const response = await fetch('http://localhost:9222/json/version')
+const { webSocketDebuggerUrl } = await response.json()
 
-    await page.goto('https://example.com')
-    await page.screenshot({ path: 'example.png' })
-    await browser.close()
-  } catch (err) {
-    console.error(err)
-  }
-})()
+const browser = await puppeteer.connect({ browserWSEndpoint: webSocketDebuggerUrl })
+const page = await browser.newPage()
+
+await page.goto('https://example.com')
+await page.screenshot({ path: 'example.png' })
+await browser.close()
 ```
 
 ## Fonts
 
 It's possible to mount a folder with custom fonts to be used later by Chromium: add `-v $(pwd)/path/to/fonts:/home/chromium/.fonts` to `docker run` arguments.
+
+## How to update to the newer Chromium version
+
+Docker Hub's Auto Builder is used to create versioned builds. Build instructions are set to look at Git tag value and create a corresponding Dcoker image tag.
+
+To update the version:
+1. run `make list`
+2. pick newer version and paste it (properly shortened) in [`Makefile`](./Makefile) and [`Dockerfile`](./Dockerfile)
+3. commit all changes
+4. run `make push`
 
 ## Related
 

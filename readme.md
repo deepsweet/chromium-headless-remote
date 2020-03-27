@@ -18,6 +18,7 @@ npm install puppeteer-core@chrome-80
 
 ```js
 import fetch from 'node-fetch'
+import puppeteer from 'puppeteer-core'
 
 const response = await fetch('http://localhost:9222/json/version')
 const { webSocketDebuggerUrl } = await response.json()
